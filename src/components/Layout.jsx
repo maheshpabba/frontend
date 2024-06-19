@@ -9,9 +9,9 @@ export default function Layout({ children }) {
     <>
       <div className="flex flex-col min-h-screen">
         <Navbar />
-        <div className="drawer drawer-mobile lg:drawer-open flex flex-1">
+        <div className="drawer drawer-mobile lg:drawer-open flex flex-1 relative">
           <input id="caf-drawer" type="checkbox" className="drawer-toggle" />
-          <div className="drawer-side " style={{ height: "80vh" }}>
+          <div className="drawer-side" style={{ height: "100%" }}>
             <label htmlFor="caf-drawer" className="drawer-overlay"></label>
             <Drawer />
           </div>
