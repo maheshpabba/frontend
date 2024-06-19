@@ -15,7 +15,7 @@ export default function Drawer() {
     <>
       <>
         <label className="drawer-overlay" htmlFor="caf-drawer" aria-label="close sidebar" />
-        <div className="flex flex-col w-64 min-h-full bg-base-100 sm:pt-20 lg:pt-2">
+        <div className="flex flex-col w-64 min-h-full bg-base-100 max-lg:pt-20 lg:pt-2">
           <ul className="menu grow">
             <li>
               <details open>
