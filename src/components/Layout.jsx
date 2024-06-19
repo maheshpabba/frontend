@@ -6,17 +6,22 @@ import Drawer from "./Drawer";
 
 export default function Layout({ children }) {
   return (
-    <div className="drawer lg:drawer-open">
-      <input id="caf-drawer" type="checkbox" className="drawer-toggle" />
-      <div className="flex flex-col min-h-screen drawer-content">
+    <>
+      <div className="flex flex-col" style={{ maxHeight: "90vh" }}>
         <Navbar />
-        <div className="flex flex-col px-4 w-full max-w-7xl grow">
-          <div className="items-start grow">{children}</div>
+        <div className="drawer drawer-mobile lg:drawer-open flex flex-1">
+          <input id="caf-drawer" type="checkbox" className="drawer-toggle" />
+          <div className="drawer-side " style={{ height: "80vh" }}>
+            <label htmlFor="caf-drawer" className="drawer-overlay"></label>
+            <Drawer />
+          </div>
+          <div className="drawer-content flex flex-col flex-1 overflow-y-auto">
+            <div className="flex flex-col px-4 w-full max-w-7xl grow">
+              <div className="items-start grow">{children}</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="drawer-side">
-        <Drawer />
-      </div>
-    </div>
+    </>
   );
 }
