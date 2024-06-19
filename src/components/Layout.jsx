@@ -7,7 +7,7 @@ import Drawer from "./Drawer";
 export default function Layout({ children }) {
   return (
     <>
-      <div className="flex flex-col" style={{ maxHeight: "90vh" }}>
+      <div className="flex flex-col min-h-screen">
         <Navbar />
         <div className="drawer drawer-mobile lg:drawer-open flex flex-1">
           <input id="caf-drawer" type="checkbox" className="drawer-toggle" />

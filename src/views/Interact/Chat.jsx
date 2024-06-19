@@ -90,7 +90,7 @@ export default function Chat() {
     <>
       <div className="max-h-screen grid grid-cols-3 pl-2" style={{ maxHeight: "90vh" }}>
         <div className="col-span-2 flex flex-col w-full">
-          <div className="h-4/5 bg-gray-100 overflow-hidden">
+          <div className="h-5/6 bg-gray-100 overflow-y-auto">
             {messages.map((mess, index) => (
               <div className={`message ${mess.user ? "chat chat-start" : "chat chat-end"}`} key={index}>
                 <div className="chat-bubble">

@@ -4,7 +4,7 @@ import { useDark } from "../../components/Theme";
 export default function Home() {
   const [dark, _] = useDark();
   return (
-    <div className="mx-auto prose pt-20">
+    <div className="mx-auto prose">
       <div className="flex items-center">
         {dark ? (
           <img src="/DC-AI-Dark.svg" alt="AI" className="inline-block mr-4 max-h-20" />
