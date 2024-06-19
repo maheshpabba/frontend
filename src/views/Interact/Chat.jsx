@@ -88,9 +88,9 @@ export default function Chat() {
   };
   return (
     <>
-      <div className="max-h-screen grid grid-cols-3 pl-2" style={{ maxHeight: "90vh" }}>
+      <div className="max-h-screen flex  pl-2" style={{ maxHeight: "90vh" }}>
         <div className="col-span-2 flex flex-col w-full">
-          <div className="h-5/6 bg-gray-100 overflow-y-auto">
+          <div className="flex-grow bg-gray-100 overflow-y-auto" style={{ maxHeight: "80vh" }}>
             {messages.map((mess, index) => (
               <div className={`message ${mess.user ? "chat chat-start" : "chat chat-end"}`} key={index}>
                 <div className="chat-bubble">
@@ -99,7 +99,8 @@ export default function Chat() {
               </div>
             ))}
           </div>
-          <div className="py-5">
+          <div className="py-5  w-full bg-white" style={{ maxWidth: "calc(100% - 16px)" }}>
+            {" "}
             <form onSubmit={handleSubmit}>
               <input
                 className="w-full bg-gray-100 py-5 px-3 rounded-xl text-gray-900 dark:text-gray-300"
