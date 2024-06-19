@@ -83,7 +83,7 @@ export default function RagChat() {
 
   return (
     <>
-      <div className="h-screen grid grid-cols-3 pt-20 overflow-auto md:overflow-scroll gap-4">
+      <div className="h-screen grid grid-cols-3  overflow-auto md:overflow-scroll gap-4">
         <div className="col-span-2 flex flex-col w-full">
           <div className="flex-grow overflow-auto md:overflow-scroll bg-gray-100">
             {messages.map((message, index) => (
